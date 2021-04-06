@@ -1,0 +1,108 @@
+@import "./font.scss";
+@import "./utils/mixins.sass";
+@import "./produits.scss";
+@import "./utils/variables.scss";
+
+body {
+    font-family: 'caviar_dreamsregular';
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+@media screen and (max-width: 600px) {
+    nav {
+        position: fixed;
+        display: inline-block;
+        z-index: 1;
+        top: 25%;
+        background: rgba(255, 255, 255, 0.829);
+        border-radius: 0px 10px 10px 0px;
+        font-size: 1.5em;
+        padding: 2%;
+        & .fas {
+            &:hover + .menu {
+                display: block;
+            }
+        }
+        & .menu {
+            display: none;
+            position: absolute;
+            padding: 10px;
+            line-height: 200%;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.829);
+            border-radius: 0px 10px 10px 0px;
+        }
+    }
+
+    header {
+        height: 125px;
+        text-align: center;
+        margin-bottom: 20px;
+        & .logo {
+            height: 50px;
+            color: $couleur-primaire;
+        }
+        & .description {
+            font-size: 0.8em;
+        }
+    }
+
+    .overlay-image {
+        position: relative;
+        margin-bottom: 40px;
+        & img {
+            width: 100%;
+        }
+        &_info {
+            position: absolute;
+            font-weight: 1em;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.377);
+            padding-bottom: 2%;
+            padding-top: 2%;
+            color: white;
+            left: 0px;
+            width: 100%;
+            bottom: 0px;
+        }
+    }
+
+    .presentation {
+        margin: 2%;
+        margin-bottom: 60px;
+        padding: 2%;
+        text-align: center;
+        font-size: 1em;
+        line-height: 200%;
+        & p {
+            margin-bottom: 60px
+        }
+        &_contacte {
+            @include button_contacte;
+        }
+    }
+
+    footer {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.521);
+        line-height: 150%;
+        padding-bottom: 1%;
+        padding-top: 1%;
+        li {
+            width: 85px;
+        }
+    }
+
+}
+
+@media screen and (min-width: 601px) {
+    
+}
