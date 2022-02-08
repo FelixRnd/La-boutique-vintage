@@ -5,19 +5,24 @@
     <link rel="stylesheet" href="/public/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2a52b8ad69.js" crossorigin="anonymous"></script>
+    <script src="principale.js" async></script>
 </head>
 
 <body>
-    <nav>
+
+    <nav class="menu">
         <i class="fas fa-bars"></i>
-        <div class="menu">
+        <div class="menu_list">
             <ul>
                 <a href="index.html"><li>Accueil</li></a>
-                <li>Présentation</li>
                 <li>Boutique</li>
-                <li>Contacte</li>
+                <li>Contact</li>
             </ul>
         </div>
+    </nav>
+
+    <nav class="panier">
+        <a href="panier.html"><i class="fas fa-shopping-basket"></i></a>
     </nav>
 
     <header><a href="index.html">
@@ -25,45 +30,22 @@
             <h1>La boutique vintage</h1>
         </div>
         </a>
+
         <div class="description">
-            <h2>Vente de camèra vintage depuis 1950</h2>
+            <h2>Un autre temps, pourtant si proche</h2>
         </div>
     </header>
 
-    <h3>Modèles :</h3>
+    <section id="produits">
 
-    <section class="camera">
-        <article class="camera-modele">
-            <img src="img/camera-presentation-1.jpg">
-            <ul>
-                <li>Modele : BOLEX H8 Non-reflex</li>
-                <li>Date de sortie : 1947</li>
-            </ul>
-        </article>
-
-        <article class="camera-modele">
-            <img src="img/camera-presentation-2.jpg">
-            <ul>
-                <li>Modele : Super Christen B3</li>
-                <li>Date de sortie : 1953</li>
-            </ul>
-        </article>
-
-        <article class="camera-modele">
-            <img src="img/camera-presentation-3.jpg">
-            <ul>
-                <li>Modele : Cine Kodak K-100</li>
-                <li>Date de sortie : 1956</li>
-            </ul>
-        </article>
-
-        <article class="camera-modele" id="nouveaute">
-            <img src="img/camera-presentation-4.jpg">
-            <ul>
-                <li>Modele : Pathe Webo 2ème génération</li>
-                <li>Date de sortie : 1972</li>
-            </ul>
-        </article>
     </section>
+
+    <footer>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </footer>
 </body>
 </html>

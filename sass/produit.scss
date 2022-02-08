@@ -1,0 +1,39 @@
+@import "./utils/variables.scss";
+
+@media screen and (max-width: 600px) {
+    .produit {
+        & img {
+            width: 100%;
+        }
+        &_description {
+            text-align: left;
+            
+        }
+        & ul {
+            padding: 0;
+            padding-bottom: 32px;
+        }
+    }
+
+    .bouton_acheter {
+        left: 20%;
+    }
+
+    .footer_produit {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .element {
+        & img {
+            display: block;
+            margin: auto;
+            width: 50%;
+        }
+        & h2, h3, h4, p, select,{
+            margin-left: 25%;
+            width: 50%;
+        }
+    }
+}

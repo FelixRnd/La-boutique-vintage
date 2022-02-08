@@ -1,7 +1,7 @@
 @font-face {
   font-family: "caviar_dreamsregular";
   src: url("/font/Caviar-Dreams-fontfacekit/webfonts/caviardreams_regular_macroman/CaviarDreams-webfont.eot");
-  src: url("/font/Caviar-Dreams-fontfacekit/webfonts/caviardreams_regular_macroman/CaviarDreams-webfont.eot?#iefix") format("embedded-opentype"), url("/font/Caviar-Dreams-fontfacekit/webfonts/caviardreams_regular_macroman/CaviarDreams-webfont.woff2") format("woff2"), url("/font/Caviar-Dreams-fontfacekit/webfonts/caviardreams_regular_macroman/CaviarDreams-webfont.woff") format("woff"), url("/font/Caviar-Dreams-fontfacekit/webfonts/caviardreams_regular_macroman/CaviarDreams-webfont.ttf") format("truetype"), url("/font/Caviar-Dreams-fontfacekit/webfonts/caviardreams_regular_macroman/CaviarDreams-webfont.svg#caviar_dreamsregular") format("svg");
+  src: url("/font/Caviar-Dreams-fontfacekit/webfonts/caviardreams_regular_macroman/CaviarDreams-webfont.eot?#iefix") format("embedded-opentype"), url("/font/Caviar-Dreams-fontfacekit/webfonts/caviardreams_regular_macroman/CaviarDreams-webfont.woff") format("woff"), url("/font/Caviar-Dreams-fontfacekit/webfonts/caviardreams_regular_macroman/CaviarDreams-webfont.ttf") format("truetype"), url("/font/Caviar-Dreams-fontfacekit/webfonts/caviardreams_regular_macroman/CaviarDreams-webfont.svg#caviar_dreamsregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -42,6 +42,9 @@
   stroke-width: 2;
   transform: translateX(-5px);
   transition: all 0.3s ease;
+  width: 13px;
+  height: 10px;
+  viewBox: 0 0 13 10;
 }
 .cta:hover:before {
   width: 90%;
@@ -59,25 +62,77 @@
     color: #AF5612;
   }
 
-  .camera {
-    margin-top: 50px;
-  }
-  .camera-modele {
-    margin-top: 50px;
-    border-radius: 25px;
+  #produits-modele {
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.295);
+    width: 75%;
+    margin: auto;
   }
-  .camera-modele img {
-    border-radius: 25px 25px 0px 0px;
+  #produits-modele img {
     width: 100%;
   }
-  .camera-modele ul {
+  #produits-modele ul {
     padding-bottom: 15px;
   }
 }
+@media screen and (min-width: 601px) {
+  h3 {
+    color: #AF5612;
+  }
+
+  #produits {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+  #produits img {
+    width: 100%;
+  }
+  #produits .display-camera {
+    width: 25%;
+    margin-left: 2%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .produit img {
+    width: 100%;
+  }
+  .produit_description {
+    text-align: left;
+  }
+  .produit ul {
+    padding: 0;
+    padding-bottom: 32px;
+  }
+
+  .bouton_acheter {
+    left: 20%;
+  }
+
+  .footer_produit {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .element img {
+    display: block;
+    margin: auto;
+    width: 50%;
+  }
+  .element h2, .element h3, .element h4, .element p, .element select {
+    margin-left: 25%;
+    width: 50%;
+  }
+}
+.erreruForm {
+  color: #db0000;
+  font-weight: 600;
+}
+
 body {
   font-family: "caviar_dreamsregular";
   margin: 0;
+  padding: 0;
 }
 
 ul {
@@ -89,21 +144,45 @@ a {
   color: inherit;
 }
 
+.container-btn {
+  text-align: center;
+}
+
 @media screen and (max-width: 600px) {
-  nav {
+  .menu {
     position: fixed;
     display: inline-block;
     z-index: 1;
-    top: 25%;
-    background: rgba(255, 255, 255, 0.829);
-    border-radius: 0px 10px 10px 0px;
+    top: 0;
     font-size: 1.5em;
     padding: 2%;
   }
-  nav .fas:hover + .menu {
+  .menu .fas:hover + .menu_list {
     display: block;
   }
-  nav .menu {
+  .menu_list {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    line-height: 200%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.829);
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  .panier {
+    position: fixed;
+    display: inline-block;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    font-size: 1.5em;
+    padding: 2%;
+  }
+  .panier .fas:hover + .panier_list {
+    display: block;
+  }
+  .panier_list {
     display: none;
     position: absolute;
     padding: 10px;
@@ -166,6 +245,93 @@ a {
   }
   footer li {
     width: 85px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .menu {
+    position: fixed;
+    display: inline-block;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    font-size: 1.5em;
+    padding: 2%;
+    cursor: pointer;
+  }
+  .menu .fas:hover + .menu_list {
+    display: block;
+  }
+  .menu_list {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    line-height: 200%;
+    background-color: rgba(255, 255, 255, 0.829);
+    border-radius: 10px;
+  }
+
+  .panier {
+    position: fixed;
+    display: inline-block;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    font-size: 1.5em;
+    padding: 2%;
+  }
+  .panier .fas:hover + .panier_list {
+    display: block;
+  }
+  .panier_list {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    line-height: 200%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  header {
+    height: 125px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  header .logo {
+    height: 50px;
+    color: #AF5612;
+  }
+  header .description {
+    font-size: 0.8em;
+  }
+
+  .presentation {
+    margin: 2%;
+    margin-bottom: 60px;
+    padding: 2%;
+    text-align: center;
+    font-size: 1em;
+    line-height: 200%;
+  }
+  .presentation p {
+    margin-bottom: 60px;
+  }
+  footer {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.521);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  footer ul {
+    display: flex;
+  }
+  footer li {
+    margin-right: 50px;
+    margin: auto;
+  }
+  footer li:hover {
+    border-bottom: 1px solid white;
   }
 }
 

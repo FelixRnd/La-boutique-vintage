@@ -5,51 +5,45 @@
     <link rel="stylesheet" href="/public/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/2a52b8ad69.js" crossorigin="anonymous"></script>
+    <script src="principale.js" async></script>
 </head>
 
 <body>
 
-    <nav>
+    <nav class="menu">
         <i class="fas fa-bars"></i>
-        <div class="menu">
+        <div class="menu_list">
             <ul>
                 <a href="index.html"><li>Accueil</li></a>
-                <li>Présentation</li>
                 <li>Boutique</li>
                 <li>Contact</li>
             </ul>
         </div>
     </nav>
 
-    <header><a href="index.html">
+    <nav class="panier">
+        <a href="panier.html"><i class="fas fa-shopping-basket"></i></a>
+    </nav>
+
+    <header>
         <div class="logo">
-            <h1>La boutique vintage</h1>
+            <h1><a href="index.html">La boutique vintage</a></h1>
         </div>
-        </a>
 
         <div class="description">
             <h2>Un autre temps, pourtant si proche</h2>
         </div>
     </header>
 
-    <article class="overlay-image">
-        <a href='boutique.html#nouveaute'>
-            <div class="overlay-image">
-                <img src="/img/camera-presentation-4-couleur.jpg">
-                <span class="overlay-image_info">NOUVEAUTÉ : Pathe Webo 2ème génération<br>de 1972</span>
-            </div>
-        </a>
-    </article>
-
     <article class="presentation">
         <p>
-        Bienvenue sur <strong>La boutique vintage</strong> Ce site est dédié au <strong>cinéma amateur</strong> depuis ses débuts dans les années 1920-1930 et plus spécialement
+        Bienvenue sur <strong>La boutique vintage.</strong> Ce site est dédié au <strong>cinéma amateur</strong> depuis ses débuts dans les années 1920-1930 et plus spécialement
         aux <strong>caméras</strong> dans les différents formats. 
         Son but est de faire partager ma passion pour ces techniques d'un autre age, aujourd’hui parfaitement surannées et pourtant si proches.
         Pour toutes questions, utiliser la rubrique contacte :<br></p>
         <a href="boutique.html" class="cta">
             <span>Boutique</span>
-            <svg width="13px" height="10px" viewBox="0 0 13 10">
+            <svg>
               <path d="M1,5 L11,5"></path>
               <polyline points="8 1 12 5 8 9"></polyline>
             </svg>
@@ -58,10 +52,9 @@
 
     <footer>
         <ul>
-            <a href="index.html"><li>Accueil</li></a>
-            <a href="index.html"><li>Présentation</li></a>
-            <a href="boutique.html"><li>Boutique</li></a>
-            <a href=""><li>Contact</li></a>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="boutique.html">Boutique</a></li>
+            <li><a href="">Contact</a></li>
         </ul>
     </footer>
 </body>

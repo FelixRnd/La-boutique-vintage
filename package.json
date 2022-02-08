@@ -1,11 +1,15 @@
 {
-  "name": "projet-5",
+  "name": "orinoco-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:public/css/style.css"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "express": "^4.16.4",
+    "uuid": "^3.3.2"
+  }
 }

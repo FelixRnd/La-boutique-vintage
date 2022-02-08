@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="utf-8" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2a52b8ad69.js" crossorigin="anonymous"></script>
+    <script src="principale.js" async></script>
+    <script src="panier.js" async></script>
+</head>
+
+<body>
+
+    <nav class="menu">
+        <i class="fas fa-bars"></i>
+        <div class="menu_list">
+            <ul>
+                <a href="index.html"><li>Accueil</li></a>
+                <li>Boutique</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="panier">
+        <a href="panier.html"><i class="fas fa-shopping-basket"></i></a>
+    </nav>
+
+    <header>
+        <div class="logo">
+            <h1><a href="/index.html">La boutique vintage</a></h1>
+        </div>
+    </header>
+
+        <section id="container_panier">
+            
+        </section>
+
+        <button id="btn-supprAll" onclick="suppr()">Vider le panier</button></body><br>
+
+        <form id="formulaire">
+            <label for="nom">Nom :</label>
+            <input type="text" name="nom" id="nom" required><span id="nomManquant" class="erreruForm"></span><br>
+            <label for="prenom">Prénom :</label>
+            <input type="text" name="prenom" id="prenom" required><span id="prenomManquant" class="erreruForm"></span><br>
+            <label for="adresse">Adresse :</label>
+            <input type="text" name="adresse" id="adresse" required><span id="adresseManquant" class="erreruForm"></span><br>
+            <label for="codePostal">Code postal :</label>
+            <input type="text" name="codePostal" id="codePostal" required><span id="codePostalManquant" class="erreruForm"></span><br>
+            <label for="ville">Ville :</label>
+            <input type="text" name="ville" id="ville" required><span id="villeManquant" class="erreruForm"></span><br>
+            <label for="pays">Pays :</label>
+            <input type="text" name="pays" id="pays" required><span id="paysManquant" class="erreruForm"></span><br>
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email" required><span id="emailManquant" class="erreruForm"></span><br>
+            <button
+                input type="submit" 
+                id="btn_envoyerFormulaire" 
+                name="btn_envoyerFormulaire"
+                href="commande.html">
+                Valider la commande
+            </button>
+        </form>
+
+    <footer>
+        <ul>
+            <li><a href="/index.html">Accueil</a></li>
+            <li><a href="/boutique.html">Boutique</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

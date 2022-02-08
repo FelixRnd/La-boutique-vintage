@@ -1,12 +1,16 @@
 @import "./font.scss";
 @import "./utils/mixins.sass";
-@import "./produits.scss";
+@import "./boutique.scss";
 @import "./utils/variables.scss";
+@import "./produit.scss";
+@import "./panier.scss";
 
 body {
     font-family: 'caviar_dreamsregular';
     margin: 0;
+    padding:0;
 }
+
 
 ul {
     list-style-type: none;
@@ -16,22 +20,48 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+.container-btn {
+    text-align: center;
+}
 @media screen and (max-width: 600px) {
-    nav {
+    .menu {
         position: fixed;
         display: inline-block;
         z-index: 1;
-        top: 25%;
-        background: rgba(255, 255, 255, 0.829);
-        border-radius: 0px 10px 10px 0px;
+        top: 0;
         font-size: 1.5em;
         padding: 2%;
         & .fas {
-            &:hover + .menu {
+            &:hover + .menu_list {
                 display: block;
             }
         }
-        & .menu {
+        &_list {
+            display: none;
+            position: absolute;
+            padding: 10px;
+            line-height: 200%;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.829);
+            border-radius: 0px 10px 10px 0px;
+        }
+    }
+
+    .panier {
+        position: fixed;
+        display: inline-block;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        font-size: 1.5em;
+        padding: 2%;
+        & .fas {
+            &:hover + .panier_list {
+                display: block;
+            }
+        }
+        &_list {
             display: none;
             position: absolute;
             padding: 10px;
@@ -86,7 +116,7 @@ a {
             margin-bottom: 60px
         }
         &_contacte {
-            @include button_contacte;
+            @include button_boutique;
         }
     }
 
@@ -104,5 +134,99 @@ a {
 }
 
 @media screen and (min-width: 601px) {
-    
+    .menu {
+        position: fixed;
+        display: inline-block;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        font-size: 1.5em;
+        padding: 2%;
+        cursor: pointer;
+        & .fas {
+            &:hover + .menu_list {
+                display: block;
+            }
+        }
+        &_list {
+            display: none;
+            position: absolute;
+            padding: 10px;
+            line-height: 200%;
+            background-color: rgba(255, 255, 255, 0.829);
+            border-radius: 10px;
+        }
+    }
+
+    .panier {
+        position: fixed;
+        display: inline-block;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        font-size: 1.5em;
+        padding: 2%;
+        & .fas {
+            &:hover + .panier_list {
+                display: block;
+            }
+        }
+        &_list {
+            display: none;
+            position: absolute;
+            padding: 10px;
+            line-height: 200%;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 0px 10px 10px 0px;
+        }
+    }
+
+    header {
+        height: 125px;
+        text-align: center;
+        margin-bottom: 20px;
+        & .logo {
+            height: 50px;
+            color: $couleur-primaire;
+        }
+        & .description {
+            font-size: 0.8em;
+        }
+    }
+
+
+    .presentation {
+        margin: 2%;
+        margin-bottom: 60px;
+        padding: 2%;
+        text-align: center;
+        font-size: 1em;
+        line-height: 200%;
+        & p {
+            margin-bottom: 60px
+        }
+        &_contacte {
+            @include button_boutique;
+        }
+    }
+
+    footer {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.521);
+        position:absolute;
+        bottom:0;
+        width:100%;
+        
+        ul {
+            display: flex;
+        }
+        li {
+            margin-right: 50px;
+            margin: auto;
+            &:hover {
+                 border-bottom: 1px solid white;
+            }
+        }
+    }
 }
