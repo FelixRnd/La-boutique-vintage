@@ -33,7 +33,7 @@ function displayBoutique(produits) {
     }
 }
 
-fetch("http://localhost:3000/api/cameras")
+fetch("https://la-boutique-vintage.herokuapp.com/api/cameras")
 .then(function(response){
   if(response.ok) {
     return response.json();
